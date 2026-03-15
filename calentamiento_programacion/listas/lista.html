@@ -1,0 +1,47 @@
+<!---
+Objetivo
+
+Crear una aplicación sencilla en la que el usuario pueda añadir elementos a una lista y verlos reflejados en pantalla usando JavaScript y el DOM.
+
+Requisitos
+
+Debe existir un campo de texto para escribir el contenido.
+
+Debe existir un botón para añadir el contenido a la lista.
+
+Los elementos añadidos deben almacenarse en un array.
+
+La lista que se muestra en pantalla debe generarse a partir del array, no manualmente.
+
+Cada elemento de la lista debe crearse dinámicamente con JavaScript.
+
+Interacción
+
+Al pulsar el botón:
+
+El texto del input se añade al array.
+
+La lista visible se actualiza.
+
+Cada elemento de la lista debe poder recibir al menos una interacción (por ejemplo, al hacer click).
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fase 2 de programacion</title>
+<link rel="stylesheet" href="./lista.css">
+</head>
+<body>
+	<div id="contenedor_input">
+		<label for="elemento_lista">Introduzca elemento a la lista: </label><br>
+		<input type="text" id="elemento_lista" name="elemento_lista"><br>
+		<button id="boton_agregar">Agregar</button>
+		<button id="boton_borrar">Borrar elemento</button>
+		<button id="boton_cancelar">Cancelar borrado</button>
+	</div>
+	<div id="contenedor_lista"></div>
+	<script src="./lista.js"></script>
+</body>
+</html>

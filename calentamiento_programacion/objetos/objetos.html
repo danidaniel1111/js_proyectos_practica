@@ -1,0 +1,30 @@
+
+<!-- CREAMOS TABLA CON DOM, MOSTRAMOS LOS DATOS DEL OBJ, Y EN CADA FILA UN BOTON, BARA BORRAR DATOS-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Objetos</title>
+<link rel="stylesheet" href="./objetos.css">
+</head>
+<body>
+	<div id="contenedor_crear_array">
+		<label for="elemento_array">Introduzca elemento a la lista: </label><br>
+		<input type="text" id="elemento_lista" name="elemento_lista"><br>
+		<input type="checkbox" id="completado" name="completado" value="completo">
+		<label for="completado"> ¿Completado?</label><br>
+		<button id="boton_añadir_array">Crear Tarea</button>	
+	</div>
+	<div id="contenedor_filtro_array">
+		<label for="filtro_tareas">Filtra una tarea</label>
+		<select name="filtro_tareas" id="filtro_tareas">
+		  <option value="todas">Todas</option>
+		  <option value="hechas">Hechas</option>
+		  <option value="pendientes">Pendientes</option>
+		</select>
+	</div>
+	<div id="contenedor_vista_array"></div>
+	<script src="./objetos.js"></script>
+</body>
+</html>

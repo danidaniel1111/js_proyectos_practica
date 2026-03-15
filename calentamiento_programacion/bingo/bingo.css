@@ -1,0 +1,26 @@
+.oculto{
+	 opacity: 0;
+}
+.completado{
+	background-color:#89e0b2;
+}
+.imagen{
+	  background-image: url("./logo.png");
+	
+}
+
+#tabla_bingo {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  width: 120px;
+  height: 120px;
+  text-align:center;
+  padding: 10px;
+}
+
+td:hover {
+  background-color: yellow;
+}
