@@ -1,0 +1,84 @@
+.contenedor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Para que el centro del objeto sea el que esté en el medio */
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  box-sizing: border-box; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.img_puntero{
+  width: 100px;
+  height: 100px;
+  position: absolute; 
+  left: 0;   /* Pegada al borde izquierdo del contenedor */
+  top: 30px;    /* Pegada al borde superior */
+  z-index: 3; /* Asegura que esté por encima de otros elementos */
+  opacity: 0;
+  animation: movimiento_puntero;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  
+}
+.video_youtube{
+  width: 400px;
+  height: 400px;
+  background-color: aquamarine;
+  box-shadow: 10px 10px 5px lightblue;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  animation: responsive_div; 
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.7s;
+  animation-fill-mode: both;
+
+}
+
+.video_youtube iframe {
+  border-radius: 10px;
+}
+
+
+@keyframes movimiento_puntero {
+  0% {			
+    opacity: 0;
+    transform: translateX(0) scale(0.5); 
+  }
+
+  40% {				
+    opacity: 1;
+    transform: translateX(50vw) scale(1.5); 
+  }
+
+  80% {				
+    opacity: 1;
+    transform: translateX(50vw) scale(2.5); /*Aqui es cuando hace la animacion del click */
+  }
+
+  100% {				
+    opacity: 0;
+    /* IMPORTANTE: El orden debe ser igual que arriba para que no salte */
+    transform: translateX(50vw) scale(0); 
+  }
+}
+
+/* ANIMACION RESPONSIVE  DEL DIV DEL VIDEO*/
+
+@keyframes responsive_div{
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}

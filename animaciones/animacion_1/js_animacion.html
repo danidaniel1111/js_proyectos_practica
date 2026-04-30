@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #caja {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: desplazar 2s forwards;
+        }
+
+        @keyframes desplazar {
+            to { transform: translateX(200px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="caja"></div>
+
+    <script>
+        const caja = document.getElementById('caja');
+
+        caja.addEventListener('animationend', () => {
+            // Cambiar estilos
+            caja.style.background = 'blue';
+            caja.style.borderRadius = '50%';
+            
+            // Agregar contenido
+            caja.innerText = "¡TERMINADO!";
+            
+            // Agregar un nuevo elemento al HTML
+            const texto = document.createElement('p');
+            texto.innerText = "JS ha modificado esto al final.";
+            document.body.appendChild(texto);
+        });
+    </script>
+
+</body>
+</html>
