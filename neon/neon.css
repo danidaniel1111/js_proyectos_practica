@@ -1,0 +1,43 @@
+.neon {
+  font-family: system-ui, sans-serif;
+  font-size: 80px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff; 
+  animation: neon_anim 3s ease-in-out infinite alternate;
+}
+
+body {
+  background-color: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes neon_anim {
+  from {
+    text-shadow: 
+      /* Capa 1: Brillo interno blanco */
+      0 0 2px #fff,
+      /* Capa 2: Brillo sutil del color */
+      0 0 2px #ff5555,
+      /* Capa 3: Resplandor medio */
+      0 0 2px #ff5555,
+      /* Capa 4: El "aura" del neón (grande y difusa) */
+      0 0 2px #ff5555,
+      0 0 2px #ff5555,
+      0 0 2px #ff5555;
+  }
+  
+  to {
+    text-shadow: 
+      /* En el "to", reducimos los valores para el efecto parpadeo/pulso */
+      0 0 4px #fff,
+      0 0 7px #ff5555,
+      0 0 15px #ff5555,
+      0 0 30px #ff5555,
+      0 0 50px #ff5555,
+      0 0 60px #ff5555;
+  }
+}
